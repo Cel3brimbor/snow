@@ -11,7 +11,7 @@ import backend.objects.Task;
 import java.util.ArrayList;
 
 public class TaskPersistence {
-    private static final String TASKS_FILE = "tasks.json";
+    private static final String TASKS_FILE = "website/tasks.json";
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
 

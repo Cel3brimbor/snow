@@ -9,7 +9,7 @@ import backend.objects.Note;
 import java.util.ArrayList;
 
 public class NotePersistence {
-    private static final String NOTES_FILE = "notes.json";
+    private static final String NOTES_FILE = "website/notes.json";
     private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     //saves all notes to a JSON file

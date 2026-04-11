@@ -42,7 +42,7 @@ public class Agent {
         String lmUrl = "http://127.0.0.1:1234";
         String lmModel = "google/gemma-3-4b";
 
-        try (FileInputStream fis = new FileInputStream("backend/config.properties")) {
+        try (FileInputStream fis = new FileInputStream("website/backend/config.properties")) {
             props.load(fis);
             provider = props.getProperty("ai.provider", "gemini");
             lmUrl = props.getProperty("lmstudio.url", "http://127.0.0.1:1234");
