@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - Productivity Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <button class="back-btn" onclick="goBack()">← Back to Dashboard</button>
+            <h1>AI Assistant</h1>
+        </div>
+    </header>
+
+    <main class="planner-container">
+        <div class="ai-container">
+            <div class="mode-selector">
+                <h2>Toggle AI Mode</h2>
+                <div class="mode-buttons">
+                    <button id="chat-mode-btn" class="mode-btn active" onclick="setMode('chat')">
+                        <h3>Chat Mode</h3>
+                        <p>General conversation and questions</p>
+                    </button>
+                    <button id="agent-mode-btn" class="mode-btn" onclick="setMode('agent')">
+                        <h3>Agent Mode</h3>
+                        <p>Edit notes and schedule automatically</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Interface -->
+            <div id="chat-interface" class="chat-interface">
+                <div class="chat-header">
+                    <h2 id="chat-title">Chat Mode</h2>
+                    <p id="chat-description">Ask me anything. I live in this webpage.</p>
+                </div>
+
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message ai-message">
+                        Hello! I'm your AI assistant. In chat mode, I can answer questions, provide advice, and help with general productivity topics. What would you like to talk about?
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input type="text" id="ai-input" placeholder="Type your message here..." />
+                    <button id="send-button" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+
+            <!-- Agent Interface -->
+            <div id="agent-interface" class="agent-interface hidden">
+                <div class="agent-header">
+                    <h2>Agent Mode</h2>
+                    <p>Give me instructions to edit your notes or schedule</p>
+                </div>
+
+                <div class="agent-actions">
+                    <div class="action-section">
+                        <h3>Note Management</h3>
+                        <div class="action-input">
+                            <input type="text" id="note-instruction" placeholder="e.g., 'Add a note about learning...'" />
+                            <button onclick="editNotes()">Execute</button>
+                        </div>
+                        <div class="example-commands">
+                            <p><strong>Examples:</strong></p>
+                            <ul>
+                                <li>"Add a note about the project deadline"</li>
+                                <li>"Delete the note about lunch with Sarah"</li>
+                                <li>"Update my meeting note to include the new time"</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="action-section">
+                        <h3>Schedule Management</h3>
+                        <div class="action-input">
+                            <input type="text" id="schedule-instruction" placeholder="e.g., Add 'do homework' for 2 hours" />
+                            <button onclick="editSchedule()">Execute</button>
+                        </div>
+                        <div class="example-commands">
+                            <p><strong>Examples:</strong></p>
+                            <ul>
+                                <li>"Add a 2-hour work session from 9 AM to 11 AM"</li>
+                                <li>"Mark the lunch meeting as completed"</li>
+                                <li>"Schedule a 30-minute break at 3 PM"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="agent-results" class="agent-results">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="notification-sounds.js"></script>
+    <script src="ai.js"></script>
+    <script src="timer-monitor.js"></script>
+</body>
+</html>

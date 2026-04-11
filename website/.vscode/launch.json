@@ -1,0 +1,43 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "PE",
+            "request": "launch",
+            "mainClass": "backend.PE",
+            "projectName": "final_project_ab751a4e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "backend.Main",
+            "projectName": "ICS4U_final_project_d24bc106"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "backend.Main",
+            "projectName": "final_project_ab751a4e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "backend.Main",
+            "projectName": "ICS4U_final_project_99f4f471"
+        },
+        {
+            "type": "java",
+            "name": "Run Main",
+            "request": "launch",
+            "mainClass": "backend.Main",
+            "projectName": "ICS4U_StudyProject_97b44d5",
+            "cwd": "${workspaceFolder}/ICS4U_final_project",
+            "console": "integratedTerminal",
+            "args": "--enable-preview"
+        }
+    ]
+}
