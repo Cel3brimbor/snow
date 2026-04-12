@@ -15,7 +15,7 @@ public class GeminiConfig {
     private void loadFromProperties() {
         Properties props = new Properties();
 
-        try (FileInputStream fis = new FileInputStream("backend/config.properties")) {
+        try (FileInputStream fis = new FileInputStream("website/backend/config.properties")) {
             props.load(fis);
 
             this.model = props.getProperty("gemini.model", "gemini-2.0-flash-exp");

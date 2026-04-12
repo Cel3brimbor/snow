@@ -40,3 +40,6 @@ tasks.json
 
 #AI config file
 config.properties
+
+#python stuff
+*.venv/
