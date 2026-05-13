@@ -97,8 +97,9 @@ async def main():
     print("Starting AI Agent MCP Server...", file=sys.stderr)
     print(f"Available tools: {list(AVAILABLE_TOOLS.keys())}", file=sys.stderr)
     
+    initialization_options = server.create_initialization_options()
     async with stdio_server() as (input_stream, output_stream):
-        await server.run(input_stream, output_stream, asyncio.get_event_loop())
+        await server.run(input_stream, output_stream, initialization_options)
 
 
 if __name__ == "__main__":
