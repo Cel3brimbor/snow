@@ -43,4 +43,5 @@ config.properties
 
 #python stuff
 *.venv/
-/mcp/__pycache__
+**/__pycache__/
+*.py[cod]
