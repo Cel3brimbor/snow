@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class StaticFileHandler implements HttpHandler {
-    private static final String FRONTEND_PATH = "website/frontend/";
+    private static final String FRONTEND_PATH = "frontend/";
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
